@@ -39,3 +39,7 @@ button:hover {
 #content-text{
     font-weight: bold;
 }
+
+.pressed{
+    background-color: #0056b3;
+}

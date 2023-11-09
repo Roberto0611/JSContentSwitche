@@ -2,7 +2,7 @@
 
 //Get text to change, list and buttons
 var inputText = document.getElementById("content-text");
-var brekfastButton = document.getElementById("breakfastButton");
+var breakfastButton = document.getElementById("breakfastButton");
 var lunchButton = document.getElementById("lunchButton");
 var list = document.getElementById('list')
 
@@ -11,14 +11,18 @@ var breakfastText = 'breakfast content...'
 var lunchText = 'lunch content...'
 
 //Button listeners
-brekfastButton.addEventListener('click',function(){
+breakfastButton.addEventListener('click',function(){
     inputText.textContent = breakfastText;
     displayBreakfastItems();
+    breakfastButton.classList.add('pressed');
+    lunchButton.classList.remove('pressed');
 })
 
 lunchButton.addEventListener('click',function(){
     inputText.textContent = lunchText;
-    displayLunchItems()
+    displayLunchItems();
+    lunchButton.classList.add('pressed');
+    breakfastButton.classList.remove('pressed');
 })
 
 // Función para mostrar elementos de desayuno
@@ -53,7 +57,6 @@ function displayLunchItems() {
     //Create Items
     lunchItems.forEach(function (item,item2) {
         var listItem = document.createElement('li');
-        console.log(item);
         listItem.textContent = item;
         list.appendChild(listItem);
 
