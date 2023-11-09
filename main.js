@@ -18,7 +18,7 @@ brekfastButton.addEventListener('click',function(){
 
 lunchButton.addEventListener('click',function(){
     inputText.textContent = lunchText;
-    //displayLunchItems()
+    displayLunchItems()
 })
 
 // Función para mostrar elementos de desayuno
@@ -26,7 +26,7 @@ function displayBreakfastItems() {
     // Clean the List
     list.innerHTML = '';
 
-    // Add Elements to the list
+    // Add Elements to the list 
     var breakfastItems = ['Hotcakes', 'Waffles', 'Combo#1'];
 
     //Create Items
@@ -38,18 +38,24 @@ function displayBreakfastItems() {
 }
 
 // Función para mostrar elementos de Lunch
-/*function displayLunchItems() {
+function displayLunchItems() {
     // Clean the List
     list.innerHTML = '';
 
     // Add Elements to the list
-    var breakfastItems = ['Hotcakes', 'Waffles', 'Combo#1'];
+    var lunchItems = ['Sandwich', 'Pizza', 'Combo#2'];
+    var descriptions = ['The traditional staple sandwich of the house', 'Basic pizza with mushrooms', 'A combo with a sandwich and a pizza :)']
 
     //Create Items
-    breakfastItems.forEach(function (item) {
+    lunchItems.forEach(function (item,item2) {
         var listItem = document.createElement('li');
+        console.log(item);
         listItem.textContent = item;
         list.appendChild(listItem);
+
+        var pItem = document.createElement('p');
+        pItem.textContent = descriptions[item2];
+        list.appendChild(pItem);
     });
-}*/
+}
 
