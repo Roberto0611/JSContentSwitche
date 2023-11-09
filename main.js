@@ -28,12 +28,16 @@ function displayBreakfastItems() {
 
     // Add Elements to the list 
     var breakfastItems = ['Hotcakes', 'Waffles', 'Combo#1'];
-
+    var descriptionsB = ['The traditional staple Hotcakes of the house', 'Basic waffles with Nutella', 'A combo with hotcakes and waffles :)']
     //Create Items
-    breakfastItems.forEach(function (item) {
+    breakfastItems.forEach(function (item, item2) {
         var listItem = document.createElement('li');
         listItem.textContent = item;
         list.appendChild(listItem);
+
+        var pItem = document.createElement('p');
+        pItem.textContent = descriptionsB[item2];
+        list.appendChild(pItem);
     });
 }
 
